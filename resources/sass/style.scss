@@ -1,0 +1,110 @@
+$primary: #8472FC;
+$secondary: #B6B9C3;
+$success: #04E013;
+$light: #F6F6FD;
+$muted: #9095A4;
+$large-radius: .8125em;
+$medium-radius: 0.4375em;
+
+$gray-2 : #F0F0FB;
+$gray-3 : #495969;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "light": $light,
+    "muted": $light
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body{
+    height:100%;
+    background: rgb(110,65,195);
+    background: linear-gradient(90deg, rgba(110,65,195,1) 0%, rgba(136,75,187,1) 25%, rgba(165,85,178,1) 100%);
+}
+
+#app-container {
+    height: calc(100vh - 10rem);
+    min-height: 400px;
+    max-height: calc(100vh - 10rem);
+    border-radius: $large-radius;
+    padding-top: 5rem;
+}
+
+#app-container-row{
+    -webkit-box-shadow: 15px 20px 99px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 15px 20px 99px 0px rgba(0,0,0,0.33);
+    box-shadow: 15px 20px 99px 0px rgba(0,0,0,0.33);
+}
+
+.bg-gray-2{
+    background-color: $gray-2 !important;
+}
+
+ .text-gray-3{
+    color: $gray-3 !important;;
+}
+
+ .contacts{
+     .selected{
+         background-color: $gray-2;
+         position: relative;
+         .left-border{
+             width:3px;
+             height:100%;
+             background-color: $primary;
+             position: absolute;
+             z-index: 1;
+             left:-1rem;
+         }
+     }
+
+     &::-webkit-scrollbar {
+         width: 7px;
+         height: 7px;
+     }
+     &::-webkit-scrollbar-thumb {
+         background: #DBDBEF;
+         border-radius: 15px;
+     }
+     &::-webkit-scrollbar-thumb:hover{
+         background: #9095A4;
+     }
+     &::-webkit-scrollbar-track{
+         background: #ffffff;
+         border-radius: 15px;
+         box-shadow: inset 7px 10px 12px #f0f0f0;
+     }
+ }
+
+ .contact-box{
+     border-radius: $large-radius 0 0 $large-radius;
+ }
+
+.message-box{
+     border-radius: 0 $large-radius $large-radius 0;
+ }
+
+.contact{
+    font-size:11px;
+    //line-height: 13px;
+    .contact-middle {
+        .contact-name {
+            font-size: 13px;
+        }
+    }
+}
+
+//@import "node_modules/bootstrap/scss/functions";
+//@import "node_modules/bootstrap/scss/variables";
+//@import "node_modules/bootstrap/scss/mixins";
+//
+//@import "node_modules/bootstrap/scss/root";
+//@import "node_modules/bootstrap/scss/reboot";
+//@import "node_modules/bootstrap/scss/containers";
+//@import "node_modules/bootstrap/scss/grid";
+//@import "node_modules/bootstrap/scss/tables";
+
+
